@@ -12,11 +12,7 @@ int main(int argc, char** argv) {
 
     int fd[2];
 
-    // открываем канал
-    if (pipe(fd) < 0) {
-        printf("Не удалось открыть неименованный канал.\n");
-        exit(-1);
-    }
+    createPipe(fd);
 
     int chpid = fork();
     if (chpid == -1) {

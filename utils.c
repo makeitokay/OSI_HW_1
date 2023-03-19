@@ -71,3 +71,10 @@ int getWriteonlyFifo(char name[]) {
     }
     return fd;
 }
+
+void createPipe(int fd[]) {
+    if (pipe(fd) < 0) {
+        printf("Не удалось открыть неименованный канал.\n");
+        exit(-1);
+    }
+}

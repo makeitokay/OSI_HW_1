@@ -15,4 +15,6 @@ void createFifo(char name[]);
 int getReadonlyFifo(char name[]);
 int getWriteonlyFifo(char name[]);
 
+void createPipe(int fd[]);
+
 #endif  // OSI_HW_1__UTILS_H_
